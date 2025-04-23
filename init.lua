@@ -806,11 +806,18 @@ require('lazy').setup({
   --     vim.cmd.colorscheme 'tokyonight-moon'
   --   end,
   -- },
+  -- {
+  --   'rose-pine/neovim',
+  --   name = 'rose-pine',
+  --   config = function()
+  --     vim.cmd 'colorscheme rose-pine-dawn'
+  --   end,
+  -- },
   {
-    'rose-pine/neovim',
-    name = 'rose-pine',
+    'catppuccin/nvim',
+    name = 'catppuccin',
     config = function()
-      vim.cmd 'colorscheme rose-pine-dawn'
+      vim.cmd 'colorscheme catppuccin-frappe'
     end,
   },
 
