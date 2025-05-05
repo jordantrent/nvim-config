@@ -747,7 +747,15 @@ require('lazy').setup({
       vim.cmd 'colorscheme catppuccin-frappe'
     end,
   },
-
+  {
+    'MaximilianLloyd/ascii.nvim',
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+    },
+    config = function()
+      -- Optional: configure ascii.nvim here if needed
+    end,
+  },
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
@@ -761,7 +769,10 @@ require('lazy').setup({
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
-
+      local ascii_header = require('ascii').art.text.neovim.ansi_shadow
+      require('mini.starter').setup {
+        header = table.concat(ascii_header, '\n'),
+      }
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
