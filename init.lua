@@ -769,9 +769,10 @@ require('lazy').setup({
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
-      local ascii_header = require('ascii').art.text.neovim.ansi_shadow
+      local ascii_header = require('ascii').art.text.neovim.bloody
       require('mini.starter').setup {
         header = table.concat(ascii_header, '\n'),
+        footer = '',
       }
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
